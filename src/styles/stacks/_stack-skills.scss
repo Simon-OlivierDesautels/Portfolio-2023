@@ -1,0 +1,64 @@
+// Define a mixin for converting px to rem
+
+.stack-skills{
+    &__skills-exp{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    ul{
+        display: grid;
+        column-gap:10px;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        li{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            width: 120px;
+            height: 120px;
+
+            &:hover{
+                p{
+                    top: -20px;
+                    opacity: 1;
+                }
+            }
+        }
+        
+        p{
+            display: flex;
+            justify-content: center;
+            position: absolute;
+            top:-10px;
+            opacity: 0;
+            padding: 8px 15px;
+            transition: 250ms ease-in-out;
+            background-color: $color-black;
+            border: 1px solid #373a3e;
+            border-radius: 8px;
+            font-weight: bold;
+            color:white;
+            text-transform: capitalize;
+        }
+    }
+
+    .exp-list{
+        display: grid;
+        row-gap: 50px;
+        column-gap: 60px;
+        grid-template-columns: max-content max-content;
+    }
+    
+    .exp-list__exp{
+        font-size: toRem(24);
+        font-weight: bold;
+        p{
+            margin-bottom: 10px;
+        }
+    }
+
+    a{
+        color: $color-grey--dark;
+    }
+}

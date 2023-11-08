@@ -1,0 +1,28 @@
+body{
+    background-color: $color-bg; 
+    color: black;
+}
+
+.wrapper{
+    margin: 0 auto;
+    width: calc(100vw - 160px);
+    max-width: 1520px;
+}
+
+
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+p{
+    margin: 0;
+    line-height: 1em;
+}
+
+a{
+    text-decoration: none;
+    color:unset;
+    font-weight: normal;
+}
