@@ -6,12 +6,31 @@
     &__skills-exp{
         display: flex;
         justify-content: space-between;
+        gap: 60px;
         margin-bottom: 165px;
+
+
+        @media screen and (max-width: 1200px) {
+            display: grid;
+            grid-auto-flow: row;
+            justify-content: center;
+            align-items: center;
+        }
     }
     ul{
         display: grid;
         column-gap:10px;
+        row-gap:10px;
         grid-template-columns: 1fr 1fr 1fr 1fr;
+        
+        @media screen and (max-width: 1400px) {
+            width: fit-content;
+        }
+        
+        @media screen and (max-width: 1200px) {
+            row-gap:60px;
+        }
+
         li{
             display: flex;
             justify-content: center;
@@ -19,6 +38,12 @@
             position: relative;
             width: 120px;
             height: 120px;
+
+            @media screen and (max-width: 1400px) {
+                width: unset;
+                height: unset;
+            }
+
 
             p{
                 display: flex;
@@ -35,6 +60,7 @@
                 color:white;
                 text-transform: capitalize;
                 transform: translate(0, -50%);
+                user-select: none;
             }
 
             &:before{
@@ -61,6 +87,17 @@
                     opacity: 1;
                 }
             }
+
+
+            svg{
+                max-height: 74px;
+                @media screen and (max-width: 1400px) {
+                    max-height: 54px;
+                }
+                @media screen and (max-width: 1200px) {
+                    max-height: 64px;
+                }
+            }
         }
     }
 
@@ -71,9 +108,20 @@
         grid-template-columns: max-content max-content;
         grid-auto-rows: max-content;
         margin-top: 20px;
+        
+        @media screen and (max-width: 1200px) {
+            grid-template-columns: max-content 1fr;
+            row-gap: 35px;
+            column-gap: 35px;
+        }
+
         p{
             font-size: toRem(24);
             font-weight: bold;
+
+            @media screen and (max-width: 1400px) {
+                font-size: toRem(20);
+            }
         }
 
         a{
