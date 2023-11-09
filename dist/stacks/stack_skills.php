@@ -20,8 +20,30 @@ if (is_dir($svgDirectory)) {
     }
 }
 
+
+$exp_arr = [
+    [
+        "title" => "Full-stack developer",
+        "url" => "https://reactif.ca/",
+        "url_name" => "Réactif",
+        "date" => "Septembre 2023",
+    ],
+    [
+        "title" => "Front-end developer",
+        "url" => "https://agencerubik.com/",
+        "url_name" => "Agence rubik",
+        "date" => "January 2023",
+    ],
+    [
+        "title" => "Programmer and graphic designer",
+        "url" => "https://www.bleuetdesign.com/en",
+        "url_name" => "Bleuet Design",
+        "date" => "August 2022",
+    ],
+];
+
 ?>
-<section class="stack-skills">
+<section class="stack stack-skills">
     <div class="wrapper">
         <div class="stack__title">
             <img src="#" alt="#">
@@ -30,34 +52,21 @@ if (is_dir($svgDirectory)) {
         <div class="stack-skills__skills-exp">
             <ul>
                 <?php foreach ($skills_arr as $key => $skill) { ?>
-                    <li>
-                        <?= $skill["svg"] ?> 
+                    <li data-aos="fade-up" data-aos-delay="<?= $key * 100 + 100 ?>">
+                        <?= $skill["svg"] ?>
                         <p><?= $skill["name"] ?></p>
                     </li>
                 <?php } ?>
             </ul>
 
             <div class="exp-list">
-                <p class="exp-list__year">Septembre 2023</p>
-                <div class="exp-list__exp">
-                    <p>Full-stack developer</p>
-                    <a href="https://reactif.ca/">Réactif</a>
-                </div>
-                <p class="exp-list__year">January 2023</p>
-                <div class="exp-list__exp">
-                    <p>Front-end developer</p>
-                    <a href="https://agencerubik.com/">Agence rubik</a>
-                </div>
-                <p class="exp-list__year">June 2023</p>
-                <div class="exp-list__exp">
-                    <p>Diploma in multimedia integration</p>
-                    <a href="https://www.cegepmontpetit.ca/" target="_blank">Édouard montpetit college</a>
-                </div>
-                <p class="exp-list__year">August 2022</p>
-                <div class="exp-list__exp">
-                    <p>Programmer and graphic designer</p>
-                    <a href="https://www.bleuetdesign.com/en" target="_blank">Bleuet design</a>
-                </div>
+                <?php foreach ($exp_arr as $key => $exp) { ?>
+                    <p class="exp-list__year" data-aos="fade-left" data-aos-delay="<?= $key * 200 + ((count($skills_arr) * 100) + 500) ?>"><?= $exp["date"] ?></p>
+                    <div class="exp-list__exp" data-aos="fade-left" data-aos-delay="<?= $key * 200 + ((count($skills_arr) * 100) + 500) ?>">
+                        <p><?= $exp["title"] ?></p>
+                        <a href="<?= $exp["url"] ?>" target="_blank"><?= $exp["url_name"] ?></a>
+                    </div>
+                <?php } ?>
             </div>
         </div>
     </div>

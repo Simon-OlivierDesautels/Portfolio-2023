@@ -1,0 +1,7 @@
+{
+    "onStartup": [
+      "CD into dist and Start PHP Server",
+      "Run Scss Compiler",
+      "Start BrowserSync"
+    ]
+}

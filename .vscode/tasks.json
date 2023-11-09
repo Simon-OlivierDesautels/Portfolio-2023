@@ -1,0 +1,54 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "CD into dist and Start PHP Server",
+        "type": "shell",
+        "command": "php",
+        "args": ["-S", "localhost:8888"],
+        "options": {
+          "cwd": "${workspaceFolder}/dist"
+        },
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        },
+        "presentation": {
+          "reveal": "always",
+          "panel": "new"
+        },
+        "problemMatcher": []
+      },
+      {
+        "label": "Run Scss Compiler",
+        "type": "shell",
+        "command": "npm",
+        "args": ["run", "scss:compile"],
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        },
+        "presentation": {
+          "reveal": "always",
+          "panel": "new"
+        },
+        "problemMatcher": []
+      },
+      {
+        "label": "Start BrowserSync",
+        "type": "shell",
+        "command": "npx",
+        "args": ["browser-sync", "start", "--config", "bs-config.js"],
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        },
+        "presentation": {
+          "reveal": "always",
+          "panel": "new"
+        },
+        "problemMatcher": []
+      }
+    ]
+  }
+  

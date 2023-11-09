@@ -2,7 +2,7 @@
     <img src="#" alt="#">
     <h2>Let's connect</h2>
 </div>
-<form action="POST">
+<form action="POST" data-aos="fade-right">
     <label for="email">Email</label>
     <input type="email" name="email" id="email" placeholder="example@email.com">
 
