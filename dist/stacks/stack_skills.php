@@ -11,6 +11,7 @@ if (is_dir($svgDirectory)) {
                 $svgContent = file_get_contents($svgPath);
 
                 $skills_arr[] = [
+                    "order" => substr(pathinfo($file, PATHINFO_FILENAME), 0, strpos(pathinfo($file, PATHINFO_FILENAME), "_")),
                     "svg" => $svgContent,
                     "name" => pathinfo($file, PATHINFO_FILENAME)
                 ];
@@ -46,15 +47,17 @@ $exp_arr = [
 <section class="stack stack-skills">
     <div class="wrapper">
         <div class="stack__title">
-            <img src="#" alt="#">
+            <div class="img">
+                <img src="images/sparkles.png" alt="sparkles">
+            </div>
             <h2>Skills and experiences</h2>
         </div>
         <div class="stack-skills__skills-exp">
             <ul>
                 <?php foreach ($skills_arr as $key => $skill) { ?>
-                    <li data-aos="fade-up" data-aos-delay="<?= $key * 100 + 100 ?>">
+                    <li data-aos="fade-up" data-aos-delay="<?= $key * 100 + 100 ?>" style="order:<?= $skill["order"] ?>">
                         <?= $skill["svg"] ?>
-                        <p><?= $skill["name"] ?></p>
+                        <p><?= substr($skill["name"], strpos($skill["name"], "_") + 1) ?></p>
                     </li>
                 <?php } ?>
             </ul>

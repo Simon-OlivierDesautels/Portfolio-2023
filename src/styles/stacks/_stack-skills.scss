@@ -1,6 +1,6 @@
 .stack-skills{
     h2{
-        margin-bottom: 200px;
+        margin-bottom: 100px;
     }
     
     &__skills-exp{
@@ -76,19 +76,20 @@
                 opacity: 0;
             }
             
-            
-            &:hover{
-                p{
-                    top: 50%;
-                    opacity: 1;
-                }
-
-                &:before{
-                    opacity: 1;
+            @media (hover: hover) and (pointer: fine) {
+                &:hover{
+                    p{
+                        top: 50%;
+                        opacity: 1;
+                    }
+                    
+                    &:before{
+                        opacity: 1;
+                    }
                 }
             }
-
-
+            
+            
             svg{
                 max-height: 74px;
                 @media screen and (max-width: 1400px) {
@@ -111,8 +112,13 @@
         
         @media screen and (max-width: 1200px) {
             grid-template-columns: max-content 1fr;
-            row-gap: 35px;
+            row-gap: 25px;
             column-gap: 35px;
+        }
+
+        @media screen and (max-width: 550px) {
+            grid-template-columns: max-content;
+            row-gap: 15px;
         }
 
         p{
@@ -134,6 +140,14 @@
         font-weight: bold;
         p{
             margin-bottom: 10px;
+        }
+
+        @media screen and (max-width:550px) {
+            padding-bottom: 30px;
+
+            p{
+                margin-bottom: 0;
+            }
         }
     }
 

@@ -1,5 +1,5 @@
 <div class="stack__title">
-    <img src="#" alt="#">
+    <img src="images/bamboo.png" alt="bamboo">
     <h2>Let's connect</h2>
 </div>
 <form action="POST" data-aos="fade-right">
