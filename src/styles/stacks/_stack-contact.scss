@@ -1,0 +1,31 @@
+.stack-contact{
+    .stack__title{
+        margin-bottom: 45px;
+    }
+
+    form{
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        max-width: 525px;
+        gap: 24px;
+        margin: 0 auto;
+        
+        div{
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+}  
+
+input, textarea{
+    padding: 8px 24px;   
+    border-radius: 8px;
+    border: 1px solid $color-grey--light;
+}
+label{
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: block;
+}

@@ -1,5 +1,4 @@
 <?php
-
 require("components/header.php");
 
 require("stacks/stack_intro.php");
